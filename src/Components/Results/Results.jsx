@@ -2,10 +2,13 @@ import React from 'react';
 
 import { FaWind } from 'react-icons/fa6';
 import { WiHumidity } from 'react-icons/wi';
+import Loading from '../Loading/Loading';
 
-const Results = ({ loading, weatherData }) => {
+const Results = ({ weatherData, loading }) => {
+  console.log(loading);
   return (
     <>
+      {loading && <Loading />}
       {weatherData ? (
         <main className="bg-indigo-200 text-indigo-950 p-4 rounded-lg">
           <div className="flex flex-row mb-10">
